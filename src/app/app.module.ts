@@ -5,12 +5,14 @@ import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContentComponent } from './content/content.component';
+import { BoldDirective } from './bold.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContentComponent
+    ContentComponent,
+    BoldDirective
   ],
   imports: [
     BrowserModule,

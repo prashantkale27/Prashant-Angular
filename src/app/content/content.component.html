@@ -10,6 +10,7 @@
 </div>
 <hr color="blue" />
 
+<h3 appBold >Custome Directive</h3>
 
 <button (click)="changeClass()" >change class</button> &nbsp;
 <button (click)="changeStyle()">change style</button>
@@ -21,13 +22,13 @@
   </div>
 <ng-template #printlunch>
 <ol>
-  <li [ngStyle]="myStyle" *ngFor="let item of lunchMenuItems">{{ item }}</li>
+  <li appBold  *ngFor="let item of lunchMenuItems">{{ item }}</li>
 </ol>
 </ng-template>
 
 <ng-template #printbreakfast>
     <ol  >
-      <li  [ngStyle]="myStyle" *ngFor="let item of BreakfastMenuItems">{{ item }}</li>
+      <li appBold  *ngFor="let item of BreakfastMenuItems">{{ item }}</li>
     </ol>
     </ng-template>
 
