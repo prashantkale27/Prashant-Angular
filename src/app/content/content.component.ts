@@ -12,9 +12,9 @@ export class ContentComponent implements OnInit {
    BreakfastMenuItems: string[] =["Idli","Vada","Poha","Dosa","Bread Omlet"]
     
    lunchmenuflag : boolean = true;
-
+   myStyle:object;
     //Menuitems : string[] =[] ;
-    
+    myCurrentClass : string;
   
    constructor() { }
     
@@ -24,11 +24,14 @@ export class ContentComponent implements OnInit {
      {
       //this.Menuitems = this.lunchMenuItems;
       this.lunchmenuflag = true;
+      this.myCurrentClass = 'red';
      }
      else
      {
       //this.Menuitems = this.BreakfastMenuItems;
       this.lunchmenuflag = false;
+      this.myCurrentClass = 'blue';
+      
      }
 
    } 
@@ -36,7 +39,12 @@ export class ContentComponent implements OnInit {
   ngOnInit() {
 
     //this.Menuitems = this.BreakfastMenuItems;
-
+    this.myCurrentClass = 'red';
+    this.myStyle = {
+      'color' : 'blue', 
+      'font-size':'24px',
+      'font-weight': 'bold'
+    }
   }
 
 }

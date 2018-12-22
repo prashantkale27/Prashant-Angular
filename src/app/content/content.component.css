@@ -1,0 +1,15 @@
+.red{
+    color:'white';
+    background-color: red;
+    text-decoration-color: antiquewhite;
+    padding: 5px;
+    font-style: italic;
+}
+
+
+.blue
+{
+    color:'white';
+    background-color: blue;
+    padding: 5px;
+}

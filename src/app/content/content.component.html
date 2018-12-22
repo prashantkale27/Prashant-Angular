@@ -9,17 +9,21 @@
 
 </div>
 <hr color="blue" />
+
+<h3 [hidden]="lunchmenuflag" [ngClass]="myCurrentClass"  >Breakfast Menu Items</h3>
+<h3 [hidden]="!lunchmenuflag" [ngClass]="myCurrentClass" >Lunch Menu</h3>
+
 <div *ngIf="lunchmenuflag; then printlunch else printbreakfast">
   </div>
 <ng-template #printlunch>
 <ol>
-  <li *ngFor="let item of lunchMenuItems">{{ item }}</li>
+  <li [ngStyle]="myStyle" *ngFor="let item of lunchMenuItems">{{ item }}</li>
 </ol>
 </ng-template>
 
 <ng-template #printbreakfast>
-    <ol>
-      <li *ngFor="let item of BreakfastMenuItems">{{ item }}</li>
+    <ol  >
+      <li  [ngStyle]="myStyle" *ngFor="let item of BreakfastMenuItems">{{ item }}</li>
     </ol>
     </ng-template>
 
