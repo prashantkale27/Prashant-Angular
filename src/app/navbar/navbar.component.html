@@ -5,22 +5,45 @@
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="#">Link 1</a>
+      <a class="nav-link" routerLink='/Home' >Home </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link 2</a>
+      <a class="nav-link" routerLink='/Content' >Content</a>
     </li>
-
+    <li class="nav-item">
+      <a class="nav-link" routerLink='/Pipes' >Pipes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink='/notdefined' >About us</a>
+    </li>
     <!-- Dropdown -->
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+      <!-- <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
         Dropdown link
       </a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="#">Link 1</a>
         <a class="dropdown-item" href="#">Link 2</a>
         <a class="dropdown-item" href="#">Link 3</a>
+      </div> -->
+      <div class="btn-group" dropdown>
+        <button id="button-basic" dropdownToggle type="button"  routerLink='/signup' class="btn btn-primary dropdown-toggle"
+                aria-controls="dropdown-basic">
+          Sign UP 
+        </button>
+        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+            role="menu" aria-labelledby="button-basic">
+          <!-- <li role="menuitem"><a class="dropdown-item" href="#">Sign up</a></li> -->
+          <li role="menuitem"><a class="dropdown-item" routerLink='UTD'>Register  UTD </a></li>
+          <li role="menuitem"><a class="dropdown-item" routerLink='URF' >Register URF</a></li>
+          <!-- <li class="divider dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a> 
+          </li>-->
+        </ul>
       </div>
+
     </li>
   </ul>
 </nav>
+<br>
+  
