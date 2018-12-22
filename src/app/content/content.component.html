@@ -1,0 +1,25 @@
+
+<h1 class="bg-primary text-success text-warning">
+   Restaurant Menu
+</h1>
+<div>
+ <input type="radio" [checked]="!lunchmenuflag" name="rdoMenu" (click)="changeMenu('b')" > BreakFast
+ <input type="radio" [checked]="lunchmenuflag" name="rdoMenu" (click)="changeMenu('l')" > Lunch
+ 
+
+</div>
+<hr color="blue" />
+<div *ngIf="lunchmenuflag; then printlunch else printbreakfast">
+  </div>
+<ng-template #printlunch>
+<ol>
+  <li *ngFor="let item of lunchMenuItems">{{ item }}</li>
+</ol>
+</ng-template>
+
+<ng-template #printbreakfast>
+    <ol>
+      <li *ngFor="let item of BreakfastMenuItems">{{ item }}</li>
+    </ol>
+    </ng-template>
+

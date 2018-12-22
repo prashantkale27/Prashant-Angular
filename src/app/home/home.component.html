@@ -1,0 +1,23 @@
+<br />
+
+<div>
+<img [src]="src" [height]="height" width="{{ width }}" (mouseover)="zoomin()"  (mouseleave)="zoomout()" />
+</div>
+
+<br />
+
+<div>
+    <label> First Name </label>
+    <input type="text" name="fname" [(ngModel)] = "fname"   />
+</div>
+
+<div>
+    <label> Last Name </label>
+    <input type="text" name="lname"  [(ngModel)] = "lname"  />
+</div>
+<br />
+<div>
+
+     Full Name: {{ fname + " " + lname }}
+
+</div>
