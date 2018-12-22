@@ -10,6 +10,10 @@
 </div>
 <hr color="blue" />
 
+
+<button (click)="changeClass()" >change class</button> &nbsp;
+<button (click)="changeStyle()">change style</button>
+
 <h3 [hidden]="lunchmenuflag" [ngClass]="myCurrentClass"  >Breakfast Menu Items</h3>
 <h3 [hidden]="!lunchmenuflag" [ngClass]="myCurrentClass" >Lunch Menu</h3>
 

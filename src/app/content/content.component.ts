@@ -15,9 +15,26 @@ export class ContentComponent implements OnInit {
    myStyle:object;
     //Menuitems : string[] =[] ;
     myCurrentClass : string;
+    toggleStyle : boolean;
   
    constructor() { }
-    
+   
+   changeStyle()
+   {
+     this.toggleStyle = !this.toggleStyle;
+     this.myStyle = {
+      'color' : this.toggleStyle ? 'yellow' : 'green',
+      'font-size': this.toggleStyle ? '24px' : '10px',
+      'font-weight': this.toggleStyle ?'bold' : 'normal'
+    }
+   }
+
+
+   changeClass()
+   {
+    this.myCurrentClass == 'red' ? this.myCurrentClass ='blue' : this.myCurrentClass='red';
+   }
+
    changeMenu(flag)
    {
      if(flag=='l')
